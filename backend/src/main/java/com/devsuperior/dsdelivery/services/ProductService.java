@@ -19,7 +19,7 @@ public class ProductService {
 	@Transactional
 	public List<ProductDto> findAll(){
 		
-		List<Product> list = productRepository.findAll();
+		List<Product> list = productRepository.findAllByOrderByNameAsc();
 		return list.stream().map(x -> new ProductDto(x)).collect(Collectors.toList());
 	}
 }
