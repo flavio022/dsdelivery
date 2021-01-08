@@ -1,5 +1,9 @@
 package com.devsuperior.dsdelivery.repositories;
 
-public class OrderRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.devsuperior.dsdelivery.entities.Order;
+
+public interface OrderRepository extends JpaRepository<Order, Long> {
 
 }
